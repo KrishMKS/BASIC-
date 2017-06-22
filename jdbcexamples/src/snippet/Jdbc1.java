@@ -11,10 +11,9 @@ public static void main(String args[])
 	
 	Class.forName("oracle.jdbc.driver.OracleDriver");
 	
-	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1531:xe", "System","system");
+	Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","system");
 	
-	//PreparedStatement psmt=con.prepareStatement("insert into student values(100, 'Krish', 'DT' 6000");
-   PreparedStatement psmt=con.prepareStatement("insert into Student values(?,?,?,?)");
+	   PreparedStatement psmt=con.prepareStatement("insert into Student values(?,?,?,?)");
 			
 	int sID,fee;
 	String Sname,course;
